@@ -97,7 +97,7 @@ def handle_advance(data):
     print(single_time_step_tensor)
     # Define and load the model
     model = LSTM(input_size=14, hidden_size=50, num_layers=1, output_size=14, prediction_horizon=24)
-    model.load_state_dict(torch.load('model-2.pth', map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load('model.pth', map_location=torch.device('cpu')))
     model.eval()
 
     output = None
